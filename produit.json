@@ -1,0 +1,69 @@
+{
+    "produit" : [
+        {
+            "libelle": "Produit5",
+            "description": "Description5",
+            "prix": 5,
+            "photos": [{
+                "url_photo" : "UrlPhoto1",
+                "url_vignette" : "UrlVignette1"
+            },
+            {
+                "url_photo" : "UrlPhoto2",
+                "url_vignette" : "UrlVignette2"
+            }]
+        },
+        {
+            "libelle": "Produit5",
+            "description": "Description5",
+            "prix": 5,
+            "photos": [{
+                "url_photo" : "UrlPhoto1",
+                "url_vignette" : "UrlVignette1"
+            },
+            {
+                "url_photo" : "UrlPhoto2",
+                "url_vignette" : "UrlVignette2"
+            }]
+        },
+        {
+            "libelle": "Produit5",
+            "description": "Description5",
+            "prix": 5,
+            "photos": [{
+                "url_photo" : "UrlPhoto1",
+                "url_vignette" : "UrlVignette1"
+            },
+            {
+                "url_photo" : "UrlPhoto2",
+                "url_vignette" : "UrlVignette2"
+            }]
+        },
+        {
+            "libelle": "Produit5",
+            "description": "Description5",
+            "prix": 5,
+            "photos": [{
+                "url_photo" : "UrlPhoto1",
+                "url_vignette" : "UrlVignette1"
+            },
+            {
+                "url_photo" : "UrlPhoto2",
+                "url_vignette" : "UrlVignette2"
+            }]
+        },
+        {
+            "libelle": "Produit5",
+            "description": "Description5",
+            "prix": 5,
+            "photos": [{
+                "url_photo" : "UrlPhoto1",
+                "url_vignette" : "UrlVignette1"
+            },
+            {
+                "url_photo" : "UrlPhoto2",
+                "url_vignette" : "UrlVignette2"
+            }]
+        }
+    ]
+}
