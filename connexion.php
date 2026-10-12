@@ -6,9 +6,8 @@
     <title>Page de connexion</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="page-connexion">
     <section>
-        <img src="./images/background.png" class="bg">
 
         <div class="login">
             <h2>Se connecter</h2>
@@ -19,8 +18,9 @@
                 <input type="password" placeholder="Mot de passe">
             </div>
             <div class="inputBox">
-                <input type="submit" value="Login" id="btn">
+                <input type="submit" value="Se connecter" id="btn">
             </div>
+            <a href="index.php">Retour à l'accueil</a>
         </div>
     </section>
 </body>
