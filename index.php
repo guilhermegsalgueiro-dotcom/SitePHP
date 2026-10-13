@@ -12,9 +12,8 @@
     <header>
         <h1>La Fromagerie</h1>
         <nav>
-            <a href="index.php">Accueil</a>
-            <a href="connexion.php">Admin</a>
-            <a href="panier.php">Panier</a>
+            <a href="connexion.php">Accéder au back-office</a>
+            <a href="panier.php">Voir son panier</a>
         </nav>
     </header>
     <main>
