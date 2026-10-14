@@ -1,27 +1,6 @@
 <?php 
 session_start(); 
 $produits = json_decode(file_get_contents("produit.json"),true);
-
-// Initialiser le panier
-if (!isset($_SESSION['panier'])) {
-    $_SESSION['panier'] = [];
-}
-
-// Ajouter le produit au panier
-if (isset($_POST["produit"])) {
-    $indice = $_POST["produit"];
-    $action = $_POST["action"] ?? "ajouter";
-    if ($action == "ajouter") {
-        if (isset($_SESSION['panier'][$indice])) {
-            $_SESSION['panier'][$indice]++;
-        }
-        else {
-            $_SESSION['panier'][$indice] = 1;
-        }
-    }
-    header('Location: panier.php');
-    exit;
-}
 ?>
 <!DOCTYPE html>
 <html lang="fr">

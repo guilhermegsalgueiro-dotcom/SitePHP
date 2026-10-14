@@ -6,6 +6,31 @@ session_start();
 if (!isset($_SESSION['panier'])) {
     $_SESSION['panier'] = [];
 }
+
+// Ajouter le produit au panier
+if (isset($_POST["produit"])) {
+    $indice = $_POST["produit"];
+    $action = $_POST["action"];
+    if ($action == "ajouter") {
+        if (isset($_SESSION['panier'][$indice])) {
+            $_SESSION['panier'][$indice]++;
+        }
+        else {
+            $_SESSION['panier'][$indice] = 1;
+        }
+    }
+    elseif ($action == "soustraire") {
+        if ($_SESSION['panier'][$indice]==1) {
+            unset($_SESSION['panier'][$indice]);
+        }
+        else {
+          $_SESSION['panier'][$indice]--;  
+        }
+    }
+    header('Location: index.php');
+    exit;
+}
+?>
 ?>
 
 <!DOCTYPE html>
@@ -37,9 +62,15 @@ if (!isset($_SESSION['panier'])) {
                     <h3><?=$produit["libelle"]?></h3>
                     <p><?=$produit["description"]?></p>
                     <p class="prix"><?=number_format($produit["prix"], 2, ',', ' ')?> €</p>
-                    <form action="panier.php" method="POST">
+                    <form action="" method="POST">
                         <input type="hidden" name="produit" value="<?= $indice ?>">
-                        <button type="submit" class="bouton-panier" name="ajouter">Ajouter au panier</button>
+                        <? if (!isset($_SESSION['panier'][$indice]) || $_SESSION['panier'][$indice]==0):?>
+                            <button type="submit" class="bouton-panier" name="action" value="ajouter">Ajouter au panier</button>
+                        <? else: ?>
+                            <button type="submit" class="bouton-panier" name="action" value="soustraire">-</button>
+                            <p><?=$_SESSION['panier'][$indice]?></p>
+                            <button type="submit" class="bouton-panier" name="action" value="ajouter">+</button>
+                        <? endif; ?>
                     </form>
                 </article>
             <? endforeach; ?>
