@@ -18,7 +18,11 @@ if (!isset($_SESSION['panier'])) {
     <header>
         <h1>La Fromagerie</h1>
         <nav>
-            <a href="connexion.php">Accéder au back-office</a>
+            <? if (isset($_SESSION["admin"])): ?>
+                <a href="back-office/index.php">Accéder au back-office</a>
+            <? else: ?>
+                <a href="connexion.php">Accéder au back-office</a>
+            <? endif;?>
             <a href="panier.php">Voir son panier</a>
         </nav>
     </header>
