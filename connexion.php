@@ -1,14 +1,3 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $nomUtilisateur = htmlspecialchars($_POST['nomUtilisateur']);
-    $mdp = htmlspecialchars($_POST['mdp']);
-    
-    if ($nomUtilisateur === "admin" && $mdp === "admin") {
-        header('Location: back-office/accueil.php');
-        exit();
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body id="page-connexion">
     <section>
-        <form action="" method="POST">
+        <form action="verification.php" method="POST">
             <div class="login">
                 <h2>Se connecter</h2>
                 <div class="inputBox">

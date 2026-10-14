@@ -1,8 +1,14 @@
-<?php 
-    $produits = json_decode(file_get_contents("produit.json"),true);
+<?php $produits = json_decode(file_get_contents("produit.json"),true);
+
+session_start();
+
+// Initialiser le panier
+if (!isset($_SESSION['panier'])) {
+    $_SESSION['panier'] = [];
+}
 ?>
+
 <!DOCTYPE html>
-<!-- saved from url=(0066)file:///J:/WWW/Ressources_des_TPs_PHP/TP8-9/affichage/accueil.html -->
 <html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Fromagerie</title>
@@ -20,16 +26,16 @@
         <h2>Nos produits</h2>
         <section class="produits">
             <? foreach ($produits as $indice => $produit) :?>
-                <article class="produit">
-                    <a href="<?=htmlspecialchars($produit["photo"]) ?>" target="_blank">
-                    <img src="<?=htmlspecialchars($produit["photo"])?>" alt="<?=htmlspecialchars($produit["libelle"])?>">
+                <article class="produit" id="$indice">
+                    <a href="<?=$produit["photo"] ?>" target="_blank">
+                    <img src="<?=$produit["photo"]?>" alt="<?=$produit["libelle"]?>">
                     </a>
-                    <h3><?=htmlspecialchars($produit["libelle"])?></h3>
-                    <p><?=htmlspecialchars($produit["description"])?></p>
+                    <h3><?=$produit["libelle"]?></h3>
+                    <p><?=$produit["description"]?></p>
                     <p class="prix"><?=number_format($produit["prix"], 2, ',', ' ')?> €</p>
                     <form action="panier.php" method="POST">
                         <input type="hidden" name="produit" value="<?= $indice ?>">
-                        <button type="submit" class="bouton-panier">Ajouter au panier</button>
+                        <button type="submit" class="bouton-panier" name="ajouter">Ajouter au panier</button>
                     </form>
                 </article>
             <? endforeach; ?>
