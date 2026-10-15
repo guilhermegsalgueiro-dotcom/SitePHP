@@ -7,7 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($nomUtilisateur === "admin" && $mdp === "admin") {
         $_SESSION["admin"] = true;
         header('Location: back-office/index.php');
-        exit();
     }
+    else {
+        header('Location: connexion.php');
+    }
+    exit();
 }
 ?>

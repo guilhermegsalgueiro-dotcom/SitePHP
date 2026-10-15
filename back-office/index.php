@@ -33,7 +33,7 @@ $produits = json_decode(file_get_contents("../produit.json"),true);
                     <h3><?=htmlspecialchars($produit["libelle"])?></h3>
                     <p><?=htmlspecialchars($produit["description"])?></p>
                     <p class="prix"><?=number_format($produit["prix"], 2, ',', ' ')?> €</p>
-                    <form action="panier.php" method="POST">
+                    <form action="supprimer.php" method="POST">
                         <input type="hidden" name="produit" value="<?= $indice ?>">
                         <button type="submit" class="bouton-panier">Supprimer le produit</button>
                     </form>
