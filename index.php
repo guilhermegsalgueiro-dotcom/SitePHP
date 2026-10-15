@@ -62,12 +62,12 @@ if (isset($_POST["produit"])) {
                     <p><?=$produit["description"]?></p>
                     <p class="prix"><?=number_format($produit["prix"], 2, ',', ' ')?> €</p>
                     <form action="" method="POST">
-                        <input type="hidden" name="produit" value="<?= $indice ?>">
-                        <? if (!isset($_SESSION['panier'][$indice]) || $_SESSION['panier'][$indice]==0):?>
+                        <input type="hidden" name="produit" value="<?= $produit["id"] ?>">
+                        <? if (!isset($_SESSION['panier'][$produit["id"]]) || $_SESSION['panier'][$produit["id"]]==0):?>
                             <button type="submit" class="bouton-panier" name="action" value="ajouter">Ajouter au panier</button>
                         <? else: ?>
                             <button type="submit" class="bouton-panier" name="action" value="soustraire">-</button>
-                            <p><?=$_SESSION['panier'][$indice]?></p>
+                            <p><?=$_SESSION['panier'][$produit["id"]]?></p>
                             <button type="submit" class="bouton-panier" name="action" value="ajouter">+</button>
                         <? endif; ?>
                     </form>

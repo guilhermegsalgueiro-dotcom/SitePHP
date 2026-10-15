@@ -1,72 +1,74 @@
 [
-  {
-    "libelle": "Beaufort",
-    "prix": 8.90,
-    "description": "Fromage savoyard au lait cru de vache, avec une pâte ferme et des arômes fruités.",
-    "photo": "images/beaufort.jpg",
-    "vignette": "vignette/beaufort.jpg"
-  },
-  {
-    "libelle": "Brie",
-    "prix": 5.90,
-    "description": "Fromage au lait de vache à pâte molle et croûte fleurie, apprécié pour sa texture crémeuse.",
-    "photo": "images/Brie.jpg",
-    "vignette": "vignette/Brie.jpg"
-  },
-  {
-    "libelle": "Bûche de chèvre",
-    "prix": 4.50,
-    "description": "Fromage de chèvre à pâte tendre, avec une saveur douce et légèrement acidulée.",
-    "photo": "images/buchedechevre.jpg",
-    "vignette": "vignette/buchedechèvre.jpg"
-  },
-  {
-    "libelle": "Cabécou",
-    "prix": 2.90,
-    "description": "Petit fromage de chèvre du Sud-Ouest, à la texture fondante et au goût délicat.",
-    "photo": "images/cabecou.jpg",
-    "vignette": "vignette/cabecou.jpg"
-  },
-  {
-    "libelle": "Camembert",
-    "prix": 4.90,
-    "description": "Fromage traditionnel à pâte molle et croûte fleurie, au goût généreux et à la texture onctueuse.",
-    "photo": "images/camembert.jpg",
-    "vignette": "vignette/camembert.jpg"
-  },
-  {
-    "libelle": "Emmental",
-    "prix": 6.50,
-    "description": "Fromage à pâte pressée cuite, reconnaissable à ses trous et à sa saveur douce.",
-    "photo": "images/emmental.jpg",
-    "vignette": "vignette/emmental.jpg"
-  },
-  {
-    "libelle": "Mont d'Or",
-    "prix": 9.90,
-    "description": "Fromage à pâte molle, entouré d'une sangle d'épicéa, particulièrement apprécié pour son fondant.",
-    "photo": "images/montdor.jpg",
-    "vignette": "vignette/montdor.jpg"
-  },
-  {
-    "libelle": "Raclette",
-    "prix": 7.90,
-    "description": "Fromage à pâte pressée non cuite, idéal à faire fondre pour accompagner pommes de terre et légumes.",
-    "photo": "images/raclette.jpg",
-    "vignette": "vignette/raclette.jpg"
-  },
-  {
-    "libelle": "Rocamadour",
-    "prix": 3.50,
-    "description": "Petit fromage de chèvre à pâte molle, au goût doux et à la texture crémeuse.",
-    "photo": "images/rocamadour.jpg",
-    "vignette": "vignette/rocamadour.jpg"
-  },
-  {
-    "libelle": "Roquefort",
-    "prix": 8.50,
-    "description": "Fromage au lait de brebis à pâte persillée, connu pour son caractère prononcé et sa texture fondante.",
-    "photo": "images/roquefort.jpg",
-    "vignette": "vignette/roquefort.jpg"
-  }
+    {
+        "id": 1,
+        "libelle": "Brie",
+        "prix": 5.9,
+        "description": "Fromage au lait de vache \u00e0 p\u00e2te molle et cro\u00fbte fleurie, appr\u00e9ci\u00e9 pour sa texture cr\u00e9meuse.",
+        "photo": "images\/Brie.jpg",
+        "vignette": "vignette\/Brie.jpg"
+    },
+    {
+        "id": 2,
+        "libelle": "B\u00fbche de ch\u00e8vre",
+        "prix": 4.5,
+        "description": "Fromage de ch\u00e8vre \u00e0 p\u00e2te tendre, avec une saveur douce et l\u00e9g\u00e8rement acidul\u00e9e.",
+        "photo": "images\/buchedechevre.jpg",
+        "vignette": "vignette\/buchedech\u00e8vre.jpg"
+    },
+    {
+        "id": 3,
+        "libelle": "Cab\u00e9cou",
+        "prix": 2.9,
+        "description": "Petit fromage de ch\u00e8vre du Sud-Ouest, \u00e0 la texture fondante et au go\u00fbt d\u00e9licat.",
+        "photo": "images\/cabecou.jpg",
+        "vignette": "vignette\/cabecou.jpg"
+    },
+    {
+        "id": 4,
+        "libelle": "Camembert",
+        "prix": 4.9,
+        "description": "Fromage traditionnel \u00e0 p\u00e2te molle et cro\u00fbte fleurie, au go\u00fbt g\u00e9n\u00e9reux et \u00e0 la texture onctueuse.",
+        "photo": "images\/camembert.jpg",
+        "vignette": "vignette\/camembert.jpg"
+    },
+    {
+        "id": 5,
+        "libelle": "Emmental",
+        "prix": 6.5,
+        "description": "Fromage \u00e0 p\u00e2te press\u00e9e cuite, reconnaissable \u00e0 ses trous et \u00e0 sa saveur douce.",
+        "photo": "images\/emmental.jpg",
+        "vignette": "vignette\/emmental.jpg"
+    },
+    {
+        "id": 6,
+        "libelle": "Mont d'Or",
+        "prix": 9.9,
+        "description": "Fromage \u00e0 p\u00e2te molle, entour\u00e9 d'une sangle d'\u00e9pic\u00e9a, particuli\u00e8rement appr\u00e9ci\u00e9 pour son fondant.",
+        "photo": "images\/montdor.jpg",
+        "vignette": "vignette\/montdor.jpg"
+    },
+    {
+        "id": 7,
+        "libelle": "Raclette",
+        "prix": 7.9,
+        "description": "Fromage \u00e0 p\u00e2te press\u00e9e non cuite, id\u00e9al \u00e0 faire fondre pour accompagner pommes de terre et l\u00e9gumes.",
+        "photo": "images\/raclette.jpg",
+        "vignette": "vignette\/raclette.jpg"
+    },
+    {
+        "id": 8,
+        "libelle": "Rocamadour",
+        "prix": 3.5,
+        "description": "Petit fromage de ch\u00e8vre \u00e0 p\u00e2te molle, au go\u00fbt doux et \u00e0 la texture cr\u00e9meuse.",
+        "photo": "images\/rocamadour.jpg",
+        "vignette": "vignette\/rocamadour.jpg"
+    },
+    {
+        "id": 9,
+        "libelle": "Roquefort",
+        "prix": 8.5,
+        "description": "Fromage au lait de brebis \u00e0 p\u00e2te persill\u00e9e, connu pour son caract\u00e8re prononc\u00e9 et sa texture fondante.",
+        "photo": "images\/roquefort.jpg",
+        "vignette": "vignette\/roquefort.jpg"
+    }
 ]

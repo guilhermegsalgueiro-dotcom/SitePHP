@@ -21,14 +21,14 @@ $produits = json_decode(file_get_contents("produit.json"),true);
         <? if (empty($_SESSION['panier'])): ?>
             <p>Votre panier est vide</p>
         <? else: ?>
-            <? foreach ($_SESSION['panier'] as $index => $quantite): ?>
+            <? foreach ($_SESSION['panier'] as $indice => $quantite): ?>
                 <article class="produit" id="$indice">
-                    <a href="<?=$produits[$index]["photo"] ?>" target="_blank">
-                    <img src="<?=$produits[$index]["photo"]?>" alt="<?=$produits[$index]["libelle"]?>">
+                    <a href="<?=$produits[$indice]["photo"] ?>" target="_blank">
+                    <img src="<?=$produits[$indice]["photo"]?>" alt="<?=$produits[$indice]["libelle"]?>">
                     </a>
-                    <h3><?=$produits[$index]["libelle"]?></h3>
-                    <p><?=$produits[$index]["description"]?></p>
-                    <p class="prix"><?=number_format($produits[$index]["prix"], 2, ',', ' ')?> €</p>
+                    <h3><?=$produits[$indice]["libelle"]?></h3>
+                    <p><?=$produits[$indice]["description"]?></p>
+                    <p class="prix"><?=number_format($produits[$indice]["prix"], 2, ',', ' ')?> €</p>
                     <p>Quantité : <?=$quantite?></p>
                 </article>
             <? endforeach; ?>

@@ -27,14 +27,14 @@ $produits = json_decode(file_get_contents("../produit.json"),true);
         <section class="produits">
             <? foreach ($produits as $indice => $produit) :?>
                 <article class="produit">
-                    <a href="../<?=htmlspecialchars($produit["photo"]) ?>" target="_blank">
-                    <img src="../<?=htmlspecialchars($produit["photo"])?>" alt="<?=htmlspecialchars($produit["libelle"])?>">
+                    <a href="../<?=$produit["photo"] ?>" target="_blank">
+                    <img src="../<?=$produit["photo"]?>" alt="<?=$produit["libelle"]?>">
                     </a>
-                    <h3><?=htmlspecialchars($produit["libelle"])?></h3>
-                    <p><?=htmlspecialchars($produit["description"])?></p>
+                    <h3><?=$produit["libelle"]?></h3>
+                    <p><?=$produit["description"]?></p>
                     <p class="prix"><?=number_format($produit["prix"], 2, ',', ' ')?> €</p>
                     <form action="supprimer.php" method="POST">
-                        <input type="hidden" name="produit" value="<?= $indice ?>">
+                        <input type="hidden" name="produit" value="<?= $produit["id"] ?>">
                         <button type="submit" class="bouton-panier">Supprimer le produit</button>
                     </form>
                 </article>
