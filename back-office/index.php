@@ -18,6 +18,7 @@ $produits = json_decode(file_get_contents("../produit.json"),true);
     <header>
         <h1>La Fromagerie</h1>
         <nav>
+            <a href="ajouter.php">Ajouter un produit</a>
             <a href="../index.php">Revenir à l'accueil</a>
             <a href="deconnexion.php">Se déconnecter</a>
         </nav>
