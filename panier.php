@@ -23,13 +23,13 @@ $produits = json_decode(file_get_contents("produit.json"),true);
         <? else: ?>
             <? foreach ($_SESSION['panier'] as $indice => $quantite): ?>
                 <article class="produit" id="$indice">
-                    <a href="<?=$produits[$indice]["photo"] ?>" target="_blank">
-                    <img src="<?=$produits[$indice]["photo"]?>" alt="<?=$produits[$indice]["libelle"]?>">
+                    <a href="images/<?=$produits[$indice]["photo"] ?>" target="_blank">
+                        <img src="vignettes/vignette_<?= $produits[$indice]["photo"] ?>" alt="<?= $produits[$indice]["libelle"] ?>">
                     </a>
                     <h3><?=$produits[$indice]["libelle"]?></h3>
                     <p><?=$produits[$indice]["description"]?></p>
-                    <p class="prix"><?=number_format($produits[$indice]["prix"], 2, ',', ' ')?> €</p>
-                    <p>Quantité : <?=$quantite?></p>
+                    <p class="prix">Prix: <?=number_format($produits[$indice]["prix"], 2, ',', ' ')?> €</p>
+                    <p>Quantité: <?=$quantite?></p>
                 </article>
             <? endforeach; ?>
         <? endif; ?>

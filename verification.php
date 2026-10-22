@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nomUtilisateur = $_POST['nomUtilisateur'];
     $mdp = $_POST['mdp'];
     
-    if ($nomUtilisateur === "admin" && $mdp === "admin") {
+    if ($nomUtilisateur === "admin" && $mdp === "jaimisunmotdepasselongjustepourfairechierleprof") {
         $_SESSION["admin"] = true;
         header('Location: back-office/index.php');
     }

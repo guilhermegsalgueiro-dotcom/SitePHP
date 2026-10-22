@@ -53,14 +53,17 @@ if (isset($_POST["produit"])) {
     <main>
         <h2>Nos produits</h2>
         <section class="produits">
-            <? foreach ($produits as $indice => $produit) :?>
-                <article class="produit" id="$indice">
-                    <a href="<?=$produit["photo"] ?>" target="_blank">
-                    <img src="<?=$produit["photo"]?>" alt="<?=$produit["libelle"]?>">
+            <? foreach ($produits as $indice => $produit) :
+                $photo = $produit["photo"];
+                include("vignette.php");
+                ?>
+                <article class="produit" id="<?= $indice ?>">
+                    <a href="images/<?=$produit["photo"] ?>" target="_blank">
+                        <img src="vignettes/vignette_<?= $produit["photo"] ?>" alt="<?= $produit["libelle"] ?>">
                     </a>
                     <h3><?=$produit["libelle"]?></h3>
                     <p><?=$produit["description"]?></p>
-                    <p class="prix"><?=number_format($produit["prix"], 2, ',', ' ')?> €</p>
+                    <p class="prix">Prix: <?=number_format($produit["prix"], 2, ',', ' ')?> €</p>
                     <form action="" method="POST">
                         <input type="hidden" name="produit" value="<?= $produit["id"] ?>">
                         <? if (!isset($_SESSION['panier'][$produit["id"]]) || $_SESSION['panier'][$produit["id"]]==0):?>

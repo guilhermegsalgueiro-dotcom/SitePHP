@@ -20,22 +20,20 @@ if (isset($_POST["ajouter"])) // vérifier si l'utilisateur a envoyé le formula
     $libelle = $_POST["libelle"];
     $prix = $_POST["prix"];
     $description = $_POST["description"];
-    $vignette = $_POST["vignette"];
 
     // vérifier que les champs sont remplis
     if (
         $libelle != "" &&
         $prix != "" &&
         $description != "" &&
-        $vignette != "" &&
         isset($_FILES["photo"]) &&
         $_FILES["photo"]["error"] == 0
     ) {
         // récupérer le nom de la photo
-        $nomPhoto = basename($_FILES["photo"]["name"]);
+        $photo = basename($_FILES["photo"]["name"]);
 
         // Chemin de la photo
-        $cheminPhoto = $dossier . $nomPhoto;
+        $cheminPhoto = $dossier . $photo;
 
         // Déplacer la photo dans le dossier images
         if (move_uploaded_file($_FILES["photo"]["tmp_name"], $cheminPhoto))
@@ -46,8 +44,7 @@ if (isset($_POST["ajouter"])) // vérifier si l'utilisateur a envoyé le formula
                 "libelle" => $libelle,
                 "prix" => (float)$prix,
                 "description" => $description,
-                "photo" => "images/" . $nomPhoto,
-                "vignette" => $vignette
+                "photo" => $photo,
             );
 
             $produits[] = $nouveauProduit;
@@ -63,8 +60,11 @@ if (isset($_POST["ajouter"])) // vérifier si l'utilisateur a envoyé le formula
             // JSON_UNESCAPED_UNICODE : empêche de mettre des trucs bizarres à la place des accents
             // json_encode() : convertir un tableau PHP en une chaîne JSON
 
-            file_put_contents($fichier, $json);
             // enregistrer les produits dans le fichier JSON
+            file_put_contents($fichier, $json);
+            
+            // création de la vignette
+            include("../vignette.php");
 
             header("Location: index.php");
             // rediriger l'utilisateur vers une autre page
@@ -87,6 +87,7 @@ if (isset($_POST["ajouter"])) // vérifier si l'utilisateur a envoyé le formula
 <head>
     <meta charset="UTF-8">
     <title>Ajouter un fromage</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <h1>Ajouter un fromage</h1>
@@ -113,11 +114,6 @@ if (isset($erreur)): ?>
         <label>Photo du fromage :</label>
         <input type="file" name="photo"
                accept="image/*" required>
-    </p>
-    <p>
-        <label>Vignette :</label>
-        <input type="text" name="vignette"
-               placeholder="vignette/fromage.jpg" required>
     </p>
     <button type="submit" name="ajouter">
         Ajouter le produit
