@@ -1,7 +1,5 @@
 <?php
-$nom = $photo;
-
-$source = __DIR__ . "/images/" . $nom;
+$source = __DIR__ . "/images/" . $photo;
 
 $src = imagecreatefromjpeg($source);
 $taille = getimagesize($source);
@@ -16,5 +14,5 @@ imagecopyresampled(
     $taille[0], $taille[1]
 );
 
-imagejpeg($dst, __DIR__ . "/vignettes/vignette_" . $nom);
+imagejpeg($dst, __DIR__ . "/vignettes/vignette_" . $photo);
 ?>

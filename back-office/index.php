@@ -8,7 +8,6 @@ if (!isset($_SESSION["admin"])) {
 $produits = json_decode(file_get_contents("../produit.json"),true);
 ?>
 <!DOCTYPE html>
-<!-- saved from url=(0066)file:///J:/WWW/Ressources_des_TPs_PHP/TP8-9/affichage/accueil.html -->
 <html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Fromagerie</title>

@@ -1,5 +1,10 @@
 <?php 
 session_start();
+if (!isset($_SESSION["admin"])) {
+    header('Location: ../index.php');
+    exit();
+}
+
 $produits = json_decode(file_get_contents("../produit.json"),true);
 $indice = $_POST["produit"];
 unset($produits[$indice]);

@@ -1,4 +1,10 @@
-<?php
+<?php 
+session_start();
+if (!isset($_SESSION["admin"])) {
+    header('Location: ../index.php');
+    exit();
+}
+
 $fichier = "../produit.json";
 $dossier = "../images/";
 
@@ -95,8 +101,7 @@ if (isset($_POST["ajouter"])) // vérifier si l'utilisateur a envoyé le formula
 if (isset($erreur)): ?>
     <p><?= htmlspecialchars($erreur) ?></p>
 <?php endif; ?>
-<form action="ajouter.php" method="POST"
-      enctype="multipart/form-data">
+<form action="ajouter.php" method="POST" enctype="multipart/form-data">
     <p>
         <label>Nom du fromage :</label>
         <input type="text" name="libelle" required>
