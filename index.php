@@ -3,6 +3,8 @@
  * ============================================================
  * Projet              : La Fromagerie
  * Description         : Site de vente de fromages avec back-end
+ * Adresse du site     : http://lakartxela.iutbayonne.univ-pau.fr/~ggsalgueiro/SitePHP/
+ * Lien GitHub         : https://github.com/guilhermegsalgueiro-dotcom/SitePHP
  * Auteurs             : GRAVE SALGUEIRO Guilherme & TAJAN Alexandra
  * Date creation       :  9 Octobre 2026
  * Date derniere modif : 24 Octobre 2026
