@@ -1,0 +1,72 @@
+[
+    {
+        "id": 0,
+        "libelle": "Beaufort",
+        "prix": 8.9,
+        "description": "Fromage savoyard au lait cru de vache, avec une pâte ferme et des arômes fruités.",
+        "photo": "beaufort.jpg"
+    },
+    {
+        "id": 1,
+        "libelle": "Brie",
+        "prix": 5.9,
+        "description": "Fromage au lait de vache à pâte molle et croûte fleurie, apprécié pour sa texture crémeuse.",
+        "photo": "brie.jpg"
+    },
+    {
+        "id": 2,
+        "libelle": "Bûche de chèvre",
+        "prix": 4.5,
+        "description": "Fromage de chèvre à pâte tendre, avec une saveur douce et légèrement acidulée.",
+        "photo": "buchedechevre.jpg"
+    },
+    {
+        "id": 3,
+        "libelle": "Cabécou",
+        "prix": 2.9,
+        "description": "Petit fromage de chèvre du Sud-Ouest, à la texture fondante et au goût délicat.",
+        "photo": "cabecou.jpg"
+    },
+    {
+        "id": 4,
+        "libelle": "Camembert",
+        "prix": 4.9,
+        "description": "Fromage traditionnel à pâte molle et croûte fleurie, au goût généreux et à la texture onctueuse.",
+        "photo": "camembert.jpg"
+    },
+    {
+        "id": 5,
+        "libelle": "Emmental",
+        "prix": 6.5,
+        "description": "Fromage à pâte pressée cuite, reconnaissable à ses trous et à sa saveur douce.",
+        "photo": "emmental.jpg"
+    },
+    {
+        "id": 6,
+        "libelle": "Mont d'Or",
+        "prix": 9.9,
+        "description": "Fromage à pâte molle, entouré d'une sangle d'épicéa, particulièrement apprécié pour son fondant.",
+        "photo": "montdor.jpg"
+    },
+    {
+        "id": 7,
+        "libelle": "Raclette",
+        "prix": 7.9,
+        "description": "Fromage à pâte pressée non cuite, idéal à faire fondre pour accompagner pommes de terre et légumes.",
+        "photo": "raclette.jpg"
+    },
+    {
+        "id": 8,
+        "libelle": "Rocamadour",
+        "prix": 3.5,
+        "description": "Petit fromage de chèvre à pâte molle, au goût doux et à la texture crémeuse.",
+        "photo": "rocamadour.jpg"
+    },
+    {
+        "id": 9,
+        "libelle": "Roquefort",
+        "prix": 8.5,
+        "description": "Fromage au lait de brebis à pâte persillée, connu pour son caractère prononcé et sa texture fondante.",
+        "photo": "roquefort.jpg"
+    }
+]

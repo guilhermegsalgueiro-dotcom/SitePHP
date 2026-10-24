@@ -20,7 +20,7 @@
                 <div class="inputBox">
                     <input type="submit" value="Se connecter" id="btn">
                 </div>
-                <a href="index.php">Revenir à l'accueil</a>
+                <a href="index.php">Revenir a l'accueil</a>
             </div>
         </form>
     </section>
