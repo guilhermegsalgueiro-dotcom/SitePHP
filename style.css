@@ -1,34 +1,26 @@
-/* Reset */
+
+/* ===== RESET ET BASE ===== */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-/* Backgrounds */
-#page-index {
-    background-image: url("images/fond.png");
-}
-
-#page-connexion {
-    background-image: url("images/fond-connexion.jpg");
-}
-
-html {
-    min-height: 100%;
-}
+html { min-height: 100%; }
 
 body {
-    margin: 0;
     min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #ffdf65;
-    background-size: cover;
     color: #222;
+    background: #ffdf65;
+    background-size: cover;
+    font-family: Arial, sans-serif;
 }
 
-/* Section */
+#page-index { background-image: url("images/fond.png"); }
+#page-connexion { background-image: url("images/fond-connexion.jpg"); }
+
+/* ===== CONNEXION ET ANIMATION ===== */
 section {
     position: relative;
     display: flex;
@@ -38,37 +30,25 @@ section {
     height: 100vh;
 }
 
-/* Background Images */
-section .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-}
-
+section .bg,
 section .trees {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 100;
     pointer-events: none;
 }
 
-/* Animated Girl */
+section .trees { z-index: 100; }
+
 section .girl {
     position: absolute;
-    scale: 0.65;
+    scale: .65;
     pointer-events: none;
     animation: animateGirl 10s linear infinite;
 }
 
-/* Login Form */
 .login {
     position: relative;
     display: flex;
@@ -76,17 +56,16 @@ section .girl {
     gap: 30px;
     width: 500px;
     padding: 60px;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255,255,255,.25);
     backdrop-filter: blur(5px);
     border: 1px solid #fff;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-right-color: rgba(255,255,255,.5);
+    border-bottom-color: rgba(255,255,255,.5);
     border-radius: 20px;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 25px 50px rgba(0,0,0,.1);
 }
 
 .login h2 {
-    position: relative;
     width: 100%;
     margin-bottom: 10px;
     text-align: center;
@@ -94,10 +73,7 @@ section .girl {
     font-weight: 600;
 }
 
-/* Login Inputs */
-.login .inputBox {
-    position: relative;
-}
+.login .inputBox { position: relative; }
 
 .login .inputBox input {
     position: relative;
@@ -105,56 +81,50 @@ section .girl {
     margin-bottom: 30px;
     padding: 15px 20px;
     outline: none;
-    font-size: 1.25rem;
-    color: black;
-    background: #fff;
-    border: none;
+    border: 0;
     border-radius: 5px;
+    background: #fff;
+    color: #000;
+    font-size: 1.25rem;
 }
 
-.login .inputBox ::placeholder {
-    color: grey;
-}
+.login .inputBox ::placeholder { color: grey; }
 
-/* Login Button */
 .login .inputBox #btn {
     position: relative;
-    background: black;
-    color: #fff;
-    border: none;
+    border: 0;
     outline: none;
+    background: #000;
+    color: #fff;
     cursor: pointer;
     font-size: 1.25rem;
     font-weight: 500;
-    transition: 0.5s;
+    transition: .5s;
 }
 
-.login .inputBox #btn:hover {
-    background: rosybrown;
-}
+.login .inputBox #btn:hover { background: rosybrown; }
 
-/* Header */
+/* ===== EN-TÊTE ET NAVIGATION ===== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background-color: rgb(235, 214, 158);
+    background: rgb(235,214,158);
     border-bottom: 1px solid #ddd;
 }
 
-header h1 {
-    margin: 0;
-}
+header h1 { margin: 0; }
 
-/* Navigation */
 nav a {
     margin-left: 25px;
     color: #222;
     text-decoration: none;
 }
 
-/* Main Content */
+nav a:hover { text-decoration: underline; }
+
+/* ===== CONTENU ET PRODUITS ===== */
 main {
     max-width: 1100px;
     margin: 40px auto;
@@ -163,50 +133,410 @@ main {
 
 main h2 {
     margin-bottom: 25px;
-    color: white;
+    color: #fff;
 }
 
-/* Product Grid */
 .produits {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-/* Product Card */
 .produit {
     padding: 20px;
-    background-color: white;
+    background: #fff;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
 }
 
-/* Product Image */
-.produit img {
-    border-radius: 8px;
-}
-
-/* Product Text */
-.produit h3 {
-    margin-bottom: 10px;
-}
+.produit img { border-radius: 8px; }
+.produit h3 { margin-bottom: 10px; }
 
 .prix {
     font-size: 20px;
     font-weight: bold;
 }
 
-/* Buttons */
 button {
     padding: 10px 18px;
-    background-color: #222;
-    color: white;
-    border: none;
+    border: 0;
     border-radius: 5px;
+    background: #222;
+    color: #fff;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #444;
+button:hover { background: #444; }
+
+/* ===== FORMULAIRES GÉNÉRAUX ===== */
+body:not([id]) > h1 {
+    max-width: 900px;
+    margin: 36px auto 20px;
+    padding: 0 20px;
+    color: #222;
+}
+
+body:not([id]) > p,
+body:not([id]) > a {
+    display: block;
+    max-width: 900px;
+    margin: 12px auto;
+    padding: 0 20px;
+}
+
+body:not([id]) > form {
+    max-width: 560px;
+    margin: 20px auto 36px;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid rgba(80,60,20,.12);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+body:not([id]) > form p { margin-bottom: 18px; }
+
+body:not([id]) > form label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+}
+
+body:not([id]) > form input,
+body:not([id]) > form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 11px 12px;
+    border: 1px solid #c9c2b3;
+    border-radius: 6px;
+    background: #fff;
+    color: #222;
+    font: inherit;
+}
+
+body:not([id]) > form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+body:not([id]) > form input:focus,
+body:not([id]) > form textarea:focus {
+    outline: 2px solid #b58b35;
+    outline-offset: 1px;
+}
+
+body:not([id]) > form button { margin-top: 4px; }
+body:not([id]) > form button:hover { background: #70542d; }
+
+/* ===== PANIER ET PAIEMENT ===== */
+#page-panier,
+body:has(input[name="numero_carte"]) {
+    min-height: 100vh;
+    background: #f7f4ed;
+    color: #332d24;
+}
+
+#page-panier > main,
+body:has(input[name="numero_carte"]) > main {
+    width: min(calc(100% - 40px), 1000px);
+    margin: 36px auto 64px;
+    padding: clamp(22px, 4vw, 40px);
+    background: #fff;
+    border: 1px solid #e8dfcf;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(62,45,20,.08);
+}
+
+/* En-tête assorti à l'accueil */
+#page-panier > header,
+body:has(input[name="numero_carte"]) > header {
+    background: rgb(235,214,158);
+    color: #222;
+    box-shadow: none;
+}
+
+#page-panier > header h1,
+body:has(input[name="numero_carte"]) > header h1 {
+    margin: 0;
+    color: #222;
+    font-size: 0;
+}
+
+#page-panier > header h1::after,
+body:has(input[name="numero_carte"]) > header h1::after {
+    content: "La Fromagerie";
+    display: inline-block;
+    color: #222;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#page-panier > header nav a,
+body:has(input[name="numero_carte"]) > header nav a {
+    color: #222;
+    font-weight: normal;
+}
+
+/* Titres des pages */
+#page-panier main > h1,
+body:has(input[name="numero_carte"]) > main > h1 {
+    margin: 0 0 24px;
+    color: #4b3920;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+}
+
+/* Articles du panier */
+#page-panier .produit {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    grid-template-areas:
+        "image title"
+        "image description"
+        "image price"
+        "image quantity";
+    align-items: start;
+    column-gap: 24px;
+    margin-bottom: 18px;
+    padding: 20px;
+    background: #fcfaf6;
+    border: 1px solid #eee5d6;
+    border-radius: 14px;
+}
+
+#page-panier .produit > a {
+    grid-area: image;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #eee8dc;
+}
+
+#page-panier .produit img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    max-width: 100%;
+    object-fit: cover;
+    transition: transform 180ms ease;
+}
+
+#page-panier .produit > a:hover img { transform: scale(1.04); }
+
+#page-panier .produit h3 {
+    grid-area: title;
+    margin-bottom: 8px;
+    color: #4b3920;
+    font-size: 1.2rem;
+}
+
+#page-panier .produit p {
+    margin-bottom: 8px;
+    color: #62594c;
+    line-height: 1.55;
+}
+
+#page-panier .produit p.prix {
+    grid-area: price;
+    color: #4b3920;
+    font-weight: 700;
+}
+
+#page-panier .produit p:last-child {
+    grid-area: quantity;
+    margin-bottom: 0;
+}
+
+#page-panier main > p {
+    margin: 18px 0;
+    line-height: 1.6;
+}
+
+#page-panier main > p:last-of-type {
+    margin: 28px 0 18px;
+    padding-top: 22px;
+    border-top: 1px solid #e8dfcf;
+    color: #4b3920;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 750;
+}
+
+#page-panier main > p:first-of-type {
+    padding: 24px;
+    border: 1px dashed #d5c8b1;
+    border-radius: 12px;
+    background: #fcfaf6;
+    color: #62594c;
+    text-align: center;
+}
+
+#page-panier main > form {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+/* Formulaire de paiement */
+body:has(input[name="numero_carte"]) > main {
+    max-width: none;
+    width: min(calc(100% - 40px), 620px);
+    padding: clamp(24px, 4vw, 42px);
+}
+
+body:has(input[name="numero_carte"]) > main > p:first-of-type {
+    margin-bottom: 26px;
+    padding: 18px 20px;
+    border-radius: 12px;
+    background: #f7f1e5;
+    color: #4b3920;
+    font-size: 1.05rem;
+}
+
+body:has(input[name="numero_carte"]) > main > p:first-of-type strong {
+    display: block;
+    margin-top: 6px;
+    font-size: 1.8rem;
+}
+
+body:has(input[name="numero_carte"]) > main form {
+    margin: 0;
+    padding: 24px;
+    border: 1px solid #eee5d6;
+    border-radius: 14px;
+    background: #fcfaf6;
+}
+
+body:has(input[name="numero_carte"]) > main form p {
+    margin-bottom: 22px;
+}
+
+body:has(input[name="numero_carte"]) > main form label {
+    display: block;
+    margin-bottom: 9px;
+    color: #443927;
+    font-weight: 650;
+}
+
+body:has(input[name="numero_carte"]) > main form br { display: none; }
+
+body:has(input[name="numero_carte"]) > main form input {
+    display: block;
+    width: 100%;
+    min-height: 48px;
+    margin-top: 8px;
+    padding: 12px 14px;
+    border: 1px solid #d8cdbb;
+    border-radius: 8px;
+    background: #fff;
+    color: #332d24;
+    font: inherit;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+body:has(input[name="numero_carte"]) > main form input:focus {
+    border-color: #9b7637;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(181,139,53,.18);
+}
+
+/* Boutons et liens des pages panier/paiement */
+#page-panier button,
+body:has(input[name="numero_carte"]) > main form button {
+    min-height: 48px;
+    padding: 12px 24px;
+    border: 0;
+    border-radius: 9px;
+    background: #4b3920;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 160ms ease, transform 160ms ease;
+}
+
+#page-panier button:hover,
+body:has(input[name="numero_carte"]) > main form button:hover {
+    background: #70542d;
+    transform: translateY(-1px);
+}
+
+body:has(input[name="numero_carte"]) > main form button {
+    width: 100%;
+    min-height: 50px;
+}
+
+body:has(input[name="numero_carte"]) > main > p[style*="color: red"] {
+    margin: 12px 0;
+    padding: 12px 14px;
+    border: 1px solid #e8b9b3;
+    border-radius: 8px;
+    background: #fff3f1;
+    color: #9f2920 !important;
+    line-height: 1.5;
+}
+
+body:has(input[name="numero_carte"]) > main > p strong { color: #4b3920; }
+
+body:has(input[name="numero_carte"]) > main > a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #70542d;
+    font-weight: 700;
+}
+
+/* ===== ADAPTATION MOBILE ===== */
+@media (max-width: 700px) {
+    .produits { grid-template-columns: 1fr; }
+
+    .login {
+        width: calc(100% - 32px);
+        padding: 30px 24px;
+    }
+
+    #page-panier main { margin-top: 24px; }
+    #page-panier .produit img { max-width: 100%; }
+
+    body:not([id]) > h1 { margin-top: 24px; }
+
+    body:not([id]) > form {
+        width: calc(100% - 32px);
+        margin: 18px 16px 28px;
+        padding: 20px;
+    }
+
+    #page-panier > header,
+    body:has(input[name="numero_carte"]) > header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    #page-panier > main,
+    body:has(input[name="numero_carte"]) > main {
+        width: calc(100% - 24px);
+        margin: 18px auto 36px;
+        padding: 20px 16px;
+    }
+
+    #page-panier .produit {
+        grid-template-columns: 88px minmax(0, 1fr);
+        column-gap: 14px;
+        padding: 14px;
+    }
+
+    #page-panier .produit img {
+        width: 88px;
+        height: 88px;
+    }
+
+    #page-panier .produit h3 { font-size: 1.05rem; }
+
+    #page-panier main > form { display: block; }
+    #page-panier main > form button { width: 100%; }
+
+    body:has(input[name="numero_carte"]) > main form {
+        padding: 18px 14px;
+    }
 }
